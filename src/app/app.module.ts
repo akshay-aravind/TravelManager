@@ -3,16 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { SharedModule } from './shared/shared.module';
+import { PackageModule } from './package/package.module';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { CustomerModule } from './customer/customer.module';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule,
+    PackageModule,
+    TooltipModule,
+    CustomerModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

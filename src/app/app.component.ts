@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'travelmanage';
+  packages1 = {
+    name: 'Akshay',
+    age:23
+  };
+  title = 'travelManager';
+
+  constructor(){
+    // Object assign
+    this.packages1 = Object.assign(this.packages1, {lastname: 'Thampi'})
+    console.log('Packages1',this.packages1);
+    const NewPack = Object.assign({}, this.packages1, {location: 'PTA'});
+    console.log('NewPack:',NewPack)
+  }
 }
